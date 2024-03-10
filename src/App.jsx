@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
+import Quotes from "./components/Quotes/Quotes";
 
 function App() {
   const [isPlay, setIsPlay] = useState(false);
@@ -27,6 +28,7 @@ function App() {
       dark:text-white duration-300">
       <Navbar />
       <Hero togglePlay={togglePlay} />
+      <Quotes />
     </main>
   );
 }
