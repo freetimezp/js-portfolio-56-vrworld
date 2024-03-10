@@ -3,6 +3,7 @@ import React from "react";
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
 
 import Logo from "../../assets/images/logo.png";
+import DarkMode from "./DarkMode";
 
 const NavLinks = [
     {
@@ -59,8 +60,9 @@ const Navbar = () => {
                                     </li>
                                 );
                             })}
+
                             {/* Darkmode feature */}
-                            <div>btn</div>
+                            <DarkMode />
                         </ul>
                     </nav>
 
@@ -68,7 +70,8 @@ const Navbar = () => {
                     <div className="md:hidden block">
                         <div className="flex items-center gap-4">
                             {/* Darkmode feature */}
-                            <div>btn</div>
+                            <DarkMode />
+
                             {showMenu ? (
                                 <HiMenuAlt1
                                     onClick={toggleMenu}
