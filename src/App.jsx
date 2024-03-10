@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Quotes from "./components/Quotes/Quotes";
 import Banner from "./components/Banner/Banner";
+import Banner2 from "./components/Banner/Banner2";
 
 function App() {
   const [isPlay, setIsPlay] = useState(false);
@@ -31,6 +32,7 @@ function App() {
       <Hero togglePlay={togglePlay} />
       <Quotes />
       <Banner togglePlay={togglePlay} />
+      <Banner2 togglePlay={togglePlay} />
     </main>
   );
 }
