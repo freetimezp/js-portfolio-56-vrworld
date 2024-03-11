@@ -67,7 +67,7 @@ const Navbar = () => {
                     </nav>
 
                     {/* Mobile View Sidebar */}
-                    <div className="md:hidden block">
+                    <div className="md:hidden block relative">
                         <div className="flex items-center gap-4">
                             {/* Darkmode feature */}
                             <DarkMode />
@@ -86,6 +86,28 @@ const Navbar = () => {
                                 />
                             )}
                         </div>
+
+                        {showMenu && (
+                            <nav className="block md:hidden absolute top-[4rem] right-[1rem] min-w-[200px]">
+                                <ul className="flex flex-col items-center gap-4 bg-gradient-to-r 
+                                    from-primary to-secondary p-4">
+                                    {NavLinks.map(({ id, name, link }) => {
+                                        return (
+                                            <li key={id} className="p-4">
+                                                <a
+                                                    href={link}
+                                                    className="text-xl font-semibold hover:text-primary py-2 
+                                            hover:border-b-2 hover:border-secondary transition-colors 
+                                            duration-500"
+                                                >
+                                                    {name}
+                                                </a>
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
+                            </nav>
+                        )}
                     </div>
                 </div>
             </div>
