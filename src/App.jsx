@@ -9,6 +9,7 @@ import Banner from "./components/Banner/Banner";
 import Banner2 from "./components/Banner/Banner2";
 import Features from "./components/Features/Features";
 import AppStore from "./components/AppStore/AppStore";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [isPlay, setIsPlay] = useState(false);
@@ -37,6 +38,7 @@ function App() {
       <Banner2 togglePlay={togglePlay} />
       <Features />
       <AppStore />
+      <Footer />
     </main>
   );
 }
