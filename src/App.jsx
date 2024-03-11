@@ -11,6 +11,8 @@ import Features from "./components/Features/Features";
 import AppStore from "./components/AppStore/AppStore";
 import Footer from "./components/Footer/Footer";
 
+import PopupPlayer from './components/PopupPlayer/PopupPlayer';
+
 function App() {
   const [isPlay, setIsPlay] = useState(false);
 
@@ -39,6 +41,8 @@ function App() {
       <Features />
       <AppStore />
       <Footer />
+
+      <PopupPlayer isPlay={isPlay} togglePlay={togglePlay} />
     </main>
   );
 }
